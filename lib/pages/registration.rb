@@ -1,9 +1,8 @@
 require 'capybara/dsl'
-# tcp://localhost:9292
 class Registration
   include Capybara::DSL
   
-  # page objects
+  # Page objects
   REGISTRATION_PAGE_URL = 'localhost:9292'
   FIRST_NAME_FIELD_ID = 'firstName'
   LAST_NAME_FIELD_ID = 'lastName'
@@ -91,7 +90,4 @@ class Registration
   def fill_in_linkedin_field(linkedin)
      find(:xpath, LINKEDIN_XPATH).set(linkedin)
   end
-  # def fill_in_uploadcv_field
-  #   attach_file(UPLOAD_CV_FIELD_NAME, 'lib/random_pic.jpg')
-  # end
 end
